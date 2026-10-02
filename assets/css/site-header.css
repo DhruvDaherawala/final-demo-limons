@@ -1,0 +1,159 @@
+.logo,
+.brand-logo {
+  left: clamp(20px, 3vw, 44px) !important;
+  top: 10px !important;
+}
+
+.logo img,
+.brand-logo img {
+  width: 250px !important;
+  height: 82px !important;
+  max-width: calc(100vw - 96px) !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+}
+
+.nav,
+.nav-menu {
+  left: clamp(250px, 28vw, 460px) !important;
+  right: clamp(230px, 17vw, 265px) !important;
+  top: 30px !important;
+  width: auto !important;
+  justify-content: center !important;
+  gap: clamp(12px, 1.7vw, 26px) !important;
+}
+
+.nav-link {
+  font-size: 15px !important;
+}
+
+.header-right,
+.header-actions {
+  left: auto !important;
+  right: clamp(18px, 2vw, 30px) !important;
+  top: 18px !important;
+  gap: 10px !important;
+}
+
+.cta,
+.btn-contact {
+  width: auto !important;
+  min-width: 154px !important;
+  height: 48px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  gap: 8px !important;
+}
+
+.gh-trigger {
+  width: 44px !important;
+  height: 44px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 111, 135, .78) !important;
+  border-radius: 50% !important;
+  background: rgba(55, 5, 14, .38) !important;
+  box-shadow: 0 0 14px rgba(232, 74, 101, .24), inset 0 0 10px rgba(232, 74, 101, .12) !important;
+}
+
+.gh-trigger img {
+  display: none !important;
+}
+
+.gh-trigger::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/brand/github-header-icon.svg") center / 100% 100% no-repeat;
+}
+
+.mobile-contact {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .logo,
+  .brand-logo {
+    left: 16px !important;
+    top: 12px !important;
+  }
+
+  .logo img,
+  .brand-logo img {
+    width: 200px !important;
+    height: 66px !important;
+    max-width: calc(100vw - 88px) !important;
+  }
+
+  .nav:not(.open),
+  .nav-menu:not(.open) {
+    display: none !important;
+  }
+
+  .nav.open,
+  .nav-menu.open {
+    position: fixed !important;
+    inset: 0 !important;
+    display: flex !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    max-height: none !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: 84px 24px 32px !important;
+    overflow-y: auto !important;
+    background: rgba(8, 2, 4, .98) !important;
+    z-index: 1000 !important;
+  }
+
+  .nav.open .nav-link,
+  .nav-menu.open .nav-link {
+    font-size: 21px !important;
+  }
+
+  .header-right,
+  .header-actions {
+    left: auto !important;
+    right: 16px !important;
+    top: 12px !important;
+  }
+
+  .header-right .gh-hover,
+  .header-actions .gh-hover {
+    display: none !important;
+  }
+
+  .cta,
+  .btn-contact {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    position: fixed !important;
+    top: 14px !important;
+    right: 14px !important;
+    display: flex !important;
+    z-index: 1100 !important;
+  }
+
+  .mobile-contact {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    min-width: 176px !important;
+    min-height: 48px !important;
+    padding: 0 20px !important;
+    border: 1px solid rgba(255, 83, 97, .7) !important;
+    border-radius: 999px !important;
+    background: rgba(80, 10, 20, .55) !important;
+    color: #fff !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+  }
+}
